@@ -48,7 +48,9 @@ defmodule Skadeupop.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      # See https://github.com/mojotech/torch/issues/269
+      {:torch, "~> 3.7.0-rc.0"}
     ]
   end
 

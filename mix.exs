@@ -51,7 +51,8 @@ defmodule Skadeupop.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:pow, "~> 1.0.26"},
       # See https://github.com/aesmail/kaffy/issues/217
-      {:kaffy, git: "https://github.com/teamwalnut/kaffy", ref: "2934d96b3c414256c1add6f6ab22de63b0abff0b"}
+      {:kaffy, git: "https://github.com/teamwalnut/kaffy", ref: "2934d96b3c414256c1add6f6ab22de63b0abff0b"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 

@@ -20,6 +20,13 @@ config :skadeupop, SkadeupopWeb.Endpoint,
 config :skadeupop, :pow,
   user: Skadeupop.Users.User,
   repo: Skadeupop.Repo
+
+config :kaffy,
+  admin_title: "Skadeupop Admin",
+  otp_app: :skadeupop,
+  ecto_repo: Skadeupop.Repo,
+  router: SkadeupopWeb.Router
+
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails

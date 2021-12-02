@@ -1,6 +1,7 @@
 defmodule SkadeupopWeb.Router do
   use SkadeupopWeb, :router
   use Pow.Phoenix.Router
+  use Kaffy.Routes, scope: "/admin", pipe_through: [:kaffy_browser, :protected]
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,6 +14,11 @@ defmodule SkadeupopWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+  end
+
+  pipeline :protected do
+    plug Pow.Plug.RequireAuthenticated,
+      error_handler: Pow.Phoenix.PlugErrorHandler
   end
 
   scope "/" do

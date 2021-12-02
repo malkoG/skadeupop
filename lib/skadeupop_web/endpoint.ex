@@ -23,12 +23,6 @@ defmodule SkadeupopWeb.Endpoint do
     only: ~w(assets fonts images favicon.ico robots.txt)
 
   plug Plug.Static,
-    at: "/torch",
-    from: {:torch, "priv/static"},
-    gzip: true,
-    cache_control_for_etags: "public, max-age=86400"
-
-  plug Plug.Static,
     at: "/kaffy",
     from: :kaffy,
     gzip: false,

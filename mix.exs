@@ -50,7 +50,8 @@ defmodule Skadeupop.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       # See https://github.com/mojotech/torch/issues/269
-      {:torch, "~> 3.7.0-rc.0"}
+      {:torch, "~> 3.7.0-rc.0"},
+      {:pow, "~> 1.0.26"}
     ]
   end
 

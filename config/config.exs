@@ -17,6 +17,9 @@ config :skadeupop, SkadeupopWeb.Endpoint,
   pubsub_server: Skadeupop.PubSub,
   live_view: [signing_salt: "gyNc8c0Q"]
 
+config :skadeupop, :pow,
+  user: Skadeupop.Users.User,
+  repo: Skadeupop.Repo
 # Configures the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
